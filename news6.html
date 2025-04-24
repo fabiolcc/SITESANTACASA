@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="icone.ico" type="image/x-icon">
+  <title>Notícia</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <style>
+    body {
+      padding: 0;
+      background-color: #f8f9fa;
+    }
+
+    .logo {
+      max-width: 150px;
+    }
+
+    .noticia-container {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .img-card {
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .img-card:hover {
+      transform: scale(1.02);
+    }
+
+    #imgExpandida {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.85);
+      justify-content: center;
+      align-items: center;
+    }
+
+    #imgExpandida img {
+      max-width: 90%;
+      max-height: 90%;
+      border: 4px solid white;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .row {
+        flex-direction: column-reverse;
+      }
+    }
+
+    /* Botão azul escuro */
+    .btn-custom {
+      background-color: #003366;
+      color: #fff;
+      border: none;
+    }
+
+    .btn-custom:hover {
+      background-color: #002244;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar branca com logo centralizada -->
+  <nav class="navbar navbar-light bg-white shadow-sm mb-4">
+    <div class="container justify-content-center">
+      <a class="navbar-brand" href="#">
+        <img src="logo.png" alt="Logo" class="logo">
+      </a>
+    </div>
+  </nav>
+
+  <!-- Notícia -->
+  <div class="noticia-container container">
+    <h1 class="mb-4 text-center">TREINAMENTO COM A EQUIPE DE ENFERMAGEM</h1>
+
+    <div class="row g-4 align-items-start">
+      <!-- Texto da notícia -->
+      <div class="col-md-8">
+        <p>
+            Nesta Quarta Feira 28/03, foi realizado junto à equipe de enfermagem um treinamento teórico e prático.
+        </p>
+        
+      </div>
+
+      <!-- Imagem da notícia -->
+      <div class="col-md-4">
+        <div class="card shadow">
+          <img src="noticia6.jpg" alt="Imagem da Notícia" class="card-img-top img-card" onclick="ampliarImagem(this)">
+          <div class="card-body text-center">
+            <small class="text-muted">Clique na imagem para ampliar</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Botões Voltar e Próxima -->
+    <div class="d-flex justify-content-center gap-3 mt-5">
+      <a href="news5.html" class="btn btn-custom">← Voltar</a>
+      <a href="news1.html" class="btn btn-custom">Próxima →</a>
+    </div>
+  </div>
+
+  <!-- Imagem em tela cheia -->
+  <div id="imgExpandida" onclick="fecharImagem()">
+    <img src="" id="imgFull">
+  </div>
+
+  <script>
+    function ampliarImagem(img) {
+      const imgExpandida = document.getElementById('imgExpandida');
+      const imgFull = document.getElementById('imgFull');
+      imgFull.src = img.src;
+      imgExpandida.style.display = 'flex';
+    }
+
+    function fecharImagem() {
+      document.getElementById('imgExpandida').style.display = 'none';
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Rodapé -->
+  <footer class="bg-dark text-white text-center py-4 mt-5">
+    <div class="container">
+      <p class="mb-2">&copy; 2025 Santa Casa de Cafelândia. Todos os direitos reservados.</p>
+      <div class="d-flex justify-content-center gap-3">
+        <a href="https://facebook.com" target="_blank" class="text-white fs-4"><i class="bi bi-facebook"></i></a>
+        <a href="https://instagram.com" target="_blank" class="text-white fs-4"><i class="bi bi-instagram"></i></a>
+        <a href="https://linkedin.com" target="_blank" class="text-white fs-4"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Empresa Amiga</title>
+    
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        /* Estilo Geral */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #ffffff;
+            padding: 12px 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .navbar-brand img {
+            height: 45px;
+        }
+        .navbar-title {
+            flex-grow: 1;
+            text-align: center;
+            font-size: 22px;
+            font-weight: 600;
+        }
+        .btn-back {
+            background-color: #0f2261;
+            color: white;
+            border: none;
+            padding: 8px 18px;
+            border-radius: 8px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .btn-back:hover {
+            background-color: #074d2c;
+        }
+
+        /* Cards */
+        .card-hover {
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: none;
+            border-radius: 10px;
+            background: #ffffff;
+            padding: 20px;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .card-title {
+            font-weight: 600;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .card-text {
+            font-size: 16px;
+            font-weight: 400;
+            color: #555;
+        }
+
+        /* Botão WhatsApp */
+        .btn-whatsapp {
+            background-color: #25d366;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+        .btn-whatsapp:hover {
+            background-color: #1ebd59;
+        }
+
+        /* Imagem Fixa com Zoom */
+        .img-zoom {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .img-zoom:hover {
+            transform: scale(1.05);
+        }
+
+        /* Carrossel de EMPRESAS */
+.carousel-inner {
+    padding: 20px 0;
+}
+
+.carousel-item img {
+    object-fit: contain;
+    padding: 10px;
+}
+
+/* Responsividade do Carrossel */
+@media (max-width: 768px) {
+    .carousel-item img {
+        max-width: 80%; /* Ajusta o tamanho das imagens no carrossel em telas menores */
+        margin: 0 auto;
+    }
+}
+
+/* Estilo do Rodapé */
+footer {
+    background-color: #ffffff; /* Cor de fundo clara */
+    color: #0c255a; /* Cor do texto */
+    padding: 30px 0; /* Espaçamento interno */
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+footer .container {
+    max-width: 1200px; /* Limita a largura do conteúdo */
+    margin: 0 auto; /* Centraliza o conteúdo */
+    padding: 0 15px; /* Espaçamento nas laterais */
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+    color: #555; /* Cor mais suave para o texto */
+}
+
+footer a {
+    color: #0066cc; /* Cor para links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #003366; /* Cor mais escura para links quando passar o mouse */
+}
+
+/* Estilo para as Redes Sociais */
+footer .social-icons {
+    margin-top: 15px; /* Espaçamento acima dos ícones */
+}
+
+footer .social-icons a {
+    margin: 0 10px; /* Espaçamento entre os ícones */
+    font-size: 20px; /* Tamanho dos ícones */
+    color: #333; /* Cor dos ícones */
+    transition: color 0.3s; /* Efeito suave na cor ao passar o mouse */
+}
+
+footer .social-icons a:hover {
+    color: #0066cc; /* Cor ao passar o mouse nos ícones */
+}
+
+.card {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .card {
+        max-width: 100%;
+    }
+}
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+            <img src="logo.png" alt="Logo">
+        </a>
+
+        <!-- Título Centralizado -->
+        <div class="navbar-title">Empresa Amiga</div>
+
+        <!-- Botão de Voltar -->
+        <a href="index.html" class="btn btn-back">← Voltar</a>
+    </div>
+</nav>
+
+<!-- Container Principal -->
+<div class="container mt-4">
+    <div class="row">
+        <!-- Card "Seja um Parceiro" -->
+        <div class="col-md-6 mb-4">
+            <div class="card card-hover">
+                <h4 class="card-title">Seja um Parceiro</h4>
+                <p class="card-text">
+                    Junte-se a nós e aumente a visibilidade da sua marca! Com nossas soluções, sua empresa alcança mais clientes e cresce cada vez mais.
+                    Com apenas um clique voce pode fazer parte da maior corrente do bem, e ainda impulsionar sua marca com a gente!
+                    Clique abaixo e fale conosco para mais informações!
+            
+                </p>
+                <!-- Botão WhatsApp -->
+                <a href="https://api.whatsapp.com/send?phone=+5514998113864&text=Ol%C3%A1,%20quero%20saber%20mais%20sobre%20a%20Empresa%20Amiga."
+                   target="_blank" class="btn btn-whatsapp">📲 Fale Conosco</a>
+            </div>
+        </div>
+
+        <!-- Card com Imagem Fixa -->
+        <div class="col-md-6 mb-4">
+            <div class="card card-hover">
+                <img src="empresas.png" alt="Imagem" class="img-zoom" data-bs-toggle="modal" data-bs-target="#imagemModal">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para Ampliar Imagem -->
+<div class="modal fade" id="imagemModal" tabindex="-1" aria-labelledby="imagemModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Visualizar Imagem</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img src="empresas.png" class="img-fluid" alt="Imagem Ampliada">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Carrossel de Convênios -->
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Empresas Parceiras</h2>
+    <div id="carouselConvenios" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000"> <!-- Intervalo de 3 segundos -->
+        <div class="carousel-inner">
+            <!-- Primeiro item do carrossel -->
+            <div class="carousel-item active">
+                <div class="row">
+                    <!-- Logo 1 -->
+                    <div class="col-6 col-sm-4 col-md-2">
+                        <img src="foxlink.png" class="d-block w-100" alt="Convênio 1">
+                    </div>
+                    <!-- Logo 2 -->
+                    <div class="col-6 col-sm-4 col-md-2">
+                        <img src="sistemafactory.png" class="d-block w-100" alt="Convênio 2">
+                    </div>
+                    <!-- Logo 3 -->
+                    <div class="col-6 col-sm-4 col-md-2">
+                        <img src="eletrocaf.jpeg" class="d-block w-100" alt="Convênio 3">
+                    </div>
+                    <!-- Logo 4 -->
+                    <div class="col-6 col-sm-4 col-md-2">
+                        <img src="logo11.png" class="d-block w-100" alt="Convênio 4">
+                    </div>
+                    <!-- Logo 5 -->
+                    <div class="col-6 col-sm-4 col-md-2">
+                        <img src="logo11.png" class="d-block w-100" alt="Convênio 5">
+                    </div>
+                    <!-- Logo 6 -->
+                    <div class="col-6 col-sm-4 col-md-2">
+                        <img src="logo11.png" class="d-block w-100" alt="Convênio 6">
+                    </div>
+                </div>
+            </div>
+            <!-- Segundo item do carrossel (caso tenha mais logos) -->
+            <div class="carousel-item">
+                <div class="row">
+                    <!-- Logo 7 -->
+                    <div class="col-6 col-sm-4 col-md-2">
+                        <img src="logo11.png" class="d-block w-100" alt="Convênio 7">
+                    </div>
+                    <!-- Logo 8 -->
+                    <div class="col-6 col-sm-4 col-md-2">
+                        <img src="logo11.png" class="d-block w-100" alt="Convênio 8">
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        <!-- Controles do carrossel (opcionais) -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselConvenios" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselConvenios" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
+<!-- Rodapé -->
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Santa Casa de Cafelândia. Todos os direitos reservados.</p>
+        <!-- Ícones das Redes Sociais -->
+        <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=61560946683395" target="_blank" title="Facebook">
+                <i class="fab fa-facebook-f"></i> <!-- Ícone do Facebook -->
+            </a>
+            <a href="https://www.instagram.com/santacasadecafelandia?igsh=MTR6cWJtNzI1bTQ5aA==" target="_blank" title="Instagram">
+                <i class="fab fa-instagram"></i> <!-- Ícone do Instagram -->
+            </a>
+            <a href="https://br.linkedin.com/company/santa-casa-de-miseric%C3%B3dia-de-cafel%C3%A2ndia" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin-in"></i> <!-- Ícone do LinkedIn -->
+            </a>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+</body>
+</html>
+
+

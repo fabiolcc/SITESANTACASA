@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icone.ico" type="image/x-icon">
+    <title>Santa Casa de Cafelândia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="logo.png" alt="Logo" class="logo">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="doacoes.html.html">Doações</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="transparencia.html">Transparência</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="noticias.html">Notícias</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="constru.html">Faq</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="constru.html"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-contato" href="contato.html">Contato</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Imagem da Santa Casa -->
+<div class="santa-casa-image">
+    <img src="santacasa.jpg" alt="Santa Casa" class="img-fluid">
+</div>
+
+<!-- Card com Nossa Missão, Nossa Visão, Nossos Valores e Botões -->
+<div class="container mt-5">
+    <div class="row">
+        <!-- Card com informações -->
+        <div class="col-md-6">
+            <div class="mission-box">
+                <h2 class="mission-title">Nossa Missão</h2>
+                <p class="mission-text">Ser uma Instituição hospitalar de excelência no atendimento geral</p>
+                <h2 class="mission-title">Nossa Visão</h2>
+                <p class="mission-text">Prestar assistência à saúde da comunidade de forma igualitária, humanizada com excelência técnica e espírito inovador, incorporando ações sociais e educativas, garantindo a satisfação dos clientes e funcionários com respeito aos princípios éticos e à qualidade de vida.</p>
+                <h2 class="mission-title">Nossos Valores</h2>
+                <p class="mission-text">Humanização
+                    Respeito
+                    Integralidade
+                    Eficácia
+                    Transparência</p>
+            </div>
+        </div>
+
+       <!-- Botões no lado direito -->
+<div class="col-md-6">
+    <div class="button-container">
+        <a href="doacoes.html.html" class="btn btn-custom">Doações</a>
+        <a href="trabalhe.html" class="btn btn-custom">Trabalhe Conosco</a>
+        <a href="ouvidoria.html" class="btn btn-custom">Ouvidoria</a>
+        <a href="constru.html" class="btn btn-custom">Nossos Projetos</a>
+    </div>
+
+    <!-- Card com imagem -->
+    <div class="card mt-4">
+        <img src="pix.jpg" alt="Imagem do Card" class="card-img-top" id="imagem-card" data-bs-toggle="modal" data-bs-target="#imagemModal">
+        <div class="card-body">
+            <h5 class="card-title">AJUDE A SANTA CASA</h5>
+            <p class="card-text">Sua ajuda pode mudar uma história.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de Ampliação da Imagem -->
+<div class="modal fade" id="imagemModal" tabindex="-1" aria-labelledby="imagemModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="imagemModalLabel">Imagem Ampliada</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img src="pix.jpg" alt="Imagem Ampliada" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- Container com Nossa História -->
+<div class="container mt-5">
+    <div class="row align-items-up">
+        <!-- Texto da história à esquerda -->
+        <div class="col-md-6">
+            <h2 class="our-history-title">Sobre a Santa Casa</h2>
+            <p class="our-history-text">
+                A Santa Casa foi fundada em 1935 com o objetivo de oferecer cuidados de saúde de qualidade à comunidade. Ao longo dos anos, tem sido uma referência no atendimento médico, comprometida com a ética e a inovação em todos os seus serviços.
+            </p>
+        </div>
+
+        <!-- Imagens em quadrados à direita -->
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-6 mb-3">
+                    <img src="imagem1.jpeg" alt="Imagem 1" class="img-fluid rounded" data-bs-toggle="modal" data-bs-target="#imagemModal1">
+                </div>
+                <div class="col-6 mb-3">
+                    <img src="imagem2.jpg" alt="Imagem 2" class="img-fluid rounded" data-bs-toggle="modal" data-bs-target="#imagemModal2">
+                </div>
+                <div class="col-6 mb-3">
+                    <img src="imagem3.jpeg" alt="Imagem 3" class="img-fluid rounded" data-bs-toggle="modal" data-bs-target="#imagemModal3">
+                </div>
+                <div class="col-6 mb-3">
+                    <img src="imagem4.jpg" alt="Imagem 4" class="img-fluid rounded" data-bs-toggle="modal" data-bs-target="#imagemModal4">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modais para ampliar as imagens -->
+<div class="modal fade" id="imagemModal1" tabindex="-1" aria-labelledby="imagemModalLabel1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="imagemModalLabel1">Imagem Ampliada </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img src="imagem1.jpeg" alt="Imagem 1 Ampliada" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="imagemModal2" tabindex="-1" aria-labelledby="imagemModalLabel2" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="imagemModalLabel2">Imagem Ampliada </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img src="imagem2.jpg" alt="Imagem 2 Ampliada" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="imagemModal3" tabindex="-1" aria-labelledby="imagemModalLabel3" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="imagemModalLabel3">Imagem Ampliada </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img src="imagem3.jpeg" alt="Imagem 3 Ampliada" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="imagemModal4" tabindex="-1" aria-labelledby="imagemModalLabel4" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="imagemModalLabel4">Imagem Ampliada </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img src="imagem4.jpg" alt="Imagem 4 Ampliada" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Carrossel de Convênios -->
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Convênios que atendemos</h2>
+    <div id="carouselConvenios" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000"> <!-- Intervalo de 3 segundos -->
+        <div class="carousel-inner">
+            <!-- Primeiro item do carrossel -->
+            <div class="carousel-item active">
+                <div class="row">
+                    <!-- Logo 1 -->
+                    <div class="col-6 col-sm-4 col-md-2">
+                        <img src="logo1.png" class="d-block w-100" alt="Convênio 1">
+                    </div>
+                    <!-- Logo 2 -->
+                    <div class="col-6 col-sm-4 col-md-2">
+                        <img src="logo2.png" class="d-block w-100" alt="Convênio 2">
+                    </div>
+                    <!-- Logo 3 -->
+                    <div class="col-6 col-sm-4 col-md-2">
+                        <img src="logo3.png" class="d-block w-100" alt="Convênio 3">
+                    </div>
+                    <!-- Logo 4 -->
+                    <div class="col-6 col-sm-4 col-md-2">
+                        <img src="logo4.png" class="d-block w-100" alt="Convênio 4">
+                    </div>
+                    <!-- Logo 5 -->
+                    <div class="col-6 col-sm-4 col-md-2">
+                        <img src="logo5.png" class="d-block w-100" alt="Convênio 5">
+                    </div>
+                    <!-- Logo 6 -->
+                    <div class="col-6 col-sm-4 col-md-2">
+                        <img src="logo6.png" class="d-block w-100" alt="Convênio 6">
+                    </div>
+                </div>
+            </div>
+            <!-- Segundo item do carrossel (caso tenha mais logos) -->
+            <div class="carousel-item">
+                <div class="row">
+                    <!-- Logo 7 -->
+                    <div class="col-6 col-sm-4 col-md-2">
+                        <img src="logo7.png" class="d-block w-100" alt="Convênio 7">
+                    </div>
+                    <!-- Logo 8 -->
+                    <div class="col-6 col-sm-4 col-md-2">
+                        <img src="logo8.png" class="d-block w-100" alt="Convênio 8">
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        <!-- Controles do carrossel (opcionais) -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselConvenios" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselConvenios" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+<!-- Seção Seja um Parceiro -->
+<div class="container mt-5">
+    <div class="row align-items-center">
+        <!-- Texto e descrição à esquerda -->
+        <div class="col-md-6">
+            <h2 class="text-left">Empresa Amiga!</h2>
+            <p></p>
+            <a href="empresaamiga.html" class="btn btn-success btn-lg">Seja Parceiro</a>
+        </div>
+
+        <!-- Logos das empresas parceiras à direita -->
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-4 col-sm-3 col-md-2 mb-4">
+                    <img src="foxlink.png" class="d-block w-100" alt="Empresa 1">
+                </div>
+                <div class="col-4 col-sm-3 col-md-2 mb-4">
+                    <img src="sistemafactory.png" class="d-block w-100" alt="Empresa 2">
+                </div>
+                <div class="col-4 col-sm-3 col-md-2 mb-4">
+                    <img src="eletrocaf.png" class="d-block w-100" alt="Empresa 3">
+                </div>
+                <div class="col-4 col-sm-3 col-md-2 mb-4">
+                    <img src="logo11.png" class="d-block w-100" alt="Empresa 4">
+                </div>
+                <div class="col-4 col-sm-3 col-md-2 mb-4">
+                    <img src="logo11.png" class="d-block w-100" alt="Empresa 5">
+                </div>
+                <div class="col-4 col-sm-3 col-md-2 mb-4">
+                    <img src="logo11.png" class="d-block w-100" alt="Empresa 6">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Rodapé -->
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Santa Casa de Cafelândia. Todos os direitos reservados.</p>
+        <!-- Ícones das Redes Sociais -->
+        <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=61560946683395" target="_blank" title="Facebook">
+                <i class="fab fa-facebook-f"></i> <!-- Ícone do Facebook -->
+            </a>
+            <a href="https://www.instagram.com/santacasadecafelandia?igsh=MTR6cWJtNzI1bTQ5aA==" target="_blank" title="Instagram">
+                <i class="fab fa-instagram"></i> <!-- Ícone do Instagram -->
+            </a>
+            <a href="https://br.linkedin.com/company/santa-casa-de-miseric%C3%B3dia-de-cafel%C3%A2ndia" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin-in"></i> <!-- Ícone do LinkedIn -->
+            </a>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

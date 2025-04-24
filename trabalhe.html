@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="icone.ico" type="image/x-icon">
+  <title>Trabalhe Conosco</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; background-color: #f8f9fa; }
+    .navbar { box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .hero-text { font-size: 2rem; font-weight: 600; margin: 30px 0; color: #4169E1; }
+    .vaga { background: #fff; border-left: 5px solid #4169E1; padding: 15px; margin-bottom: 15px; border-radius: 5px; }
+    .form-section { background: #ffffff; padding: 20px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    .form-section h5 { font-weight: 600; color: #4169E1; margin-bottom: 20px; }
+    .btn-voltar { background-color: #fff; color: #4169E1; border: 2px solid #4169E1; }
+    .btn-voltar:hover { background-color: #4169E1; color: #fff; }
+    .btn-royal { background-color: #4169E1; color: white; border: none; }
+    .btn-royal:hover { background-color: #365dcf; }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white px-4">
+    <a class="navbar-brand" href="#"><img src="logo.png" alt="Logo" height="40"></a>
+    <div class="ms-auto"><a href="index.html" class="btn btn-voltar">Voltar</a></div>
+  </nav>
+
+  <!-- Conteúdo -->
+  <div class="container my-5">
+    <div class="text-center hero-text">Venha fazer parte do nosso time!</div>
+
+    <div class="row g-4">
+      <!-- Vagas -->
+      <div class="col-md-6">
+        <h5 class="mb-3 text-royal">Vagas Disponíveis</h5>
+        <div class="vaga"><strong>NO MOMOENTO NÃO TEMOS VAGAS</strong><br></div>
+        </div>
+
+      <!-- Formulário -->
+      <div class="col-md-6">
+        <div class="form-section">
+          <h5>Envie seu currículo</h5>
+          <form action="enviar-curriculo.php" method="POST" enctype="multipart/form-data">
+            <div class="mb-3"><label class="form-label">Nome</label><input type="text" class="form-control" name="nome" required></div>
+            <div class="mb-3"><label class="form-label">Telefone</label><input type="tel" class="form-control" name="telefone" required></div>
+            <div class="mb-3"><label class="form-label">Endereço</label><input type="text" class="form-control" name="endereco" required></div>
+            <div class="mb-3"><label class="form-label">Cargo Pretendido</label><input type="text" class="form-control" name="cargo" required></div>
+            <div class="mb-3">
+              <label class="form-label">Anexar Currículo (PDF ou DOCX)</label>
+              <input type="file" class="form-control" name="curriculo" accept=".pdf,.docx" required>
+            </div>
+            <button type="submit" class="btn btn-royal w-100">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

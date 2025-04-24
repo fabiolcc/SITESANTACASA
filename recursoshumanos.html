@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icone.ico" type="image/x-icon">
+
+    <title>Prestação de Contas - Santa Casa de Cafelândia</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: rgba(135, 204, 235, 0.7);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: url('capa.jpg') no-repeat center/cover;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            font-size: 1.2em;
+        }
+        main {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        .content-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+        .content-box p {
+            flex: 1;
+            margin: 0;
+        }
+        .btn-acessar {
+            background: #0c2386;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .btn-acessar:hover {
+            background: #218838;
+        }
+        .btn-voltar {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background: #0c2386;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .btn-voltar:hover {
+            background: #218838;
+        }
+        footer {
+            background-color: #155724;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 600px) {
+            .content-box {
+                flex-direction: column;
+                text-align: center;
+            }
+            .btn-acessar {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Santa Casa de Cafelândia</h1>
+        <p>Recursos Humanos</p>
+    </header>
+    <main>
+        <a href="transparencia.html" class="btn-voltar">Voltar</a>
+        <section class="content-box">
+            <p>Relatório de Igualdade Salarial</p>
+            <a href="igualdade.html" class="btn-acessar">Acessar</a>
+        </section>
+        <section class="content-box">
+            <p>Relação de Funcionários</p>
+            <a href="relacaoprof.html" class="btn-acessar">Acessar</a>
+        </section>
+        
+    </main>
+    <footer>
+        <p>&copy; 2024 Santa Casa de Cafelândia - Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

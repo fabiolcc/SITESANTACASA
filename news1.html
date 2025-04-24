@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="icone.ico" type="image/x-icon">
+  <title>Notícia</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <style>
+    body {
+      padding: 0;
+      background-color: #f8f9fa;
+    }
+
+    .logo {
+      max-width: 150px;
+    }
+
+    .noticia-container {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .img-card {
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .img-card:hover {
+      transform: scale(1.02);
+    }
+
+    #imgExpandida {
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.85);
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    #imgExpandida.mostrar {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    #imgExpandida img {
+      max-width: 90%;
+      max-height: 90%;
+      border: 4px solid white;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .row {
+        flex-direction: column-reverse;
+      }
+    }
+
+    .btn-custom {
+      background-color: #003366;
+      color: #fff;
+      border: none;
+    }
+
+    .btn-custom:hover {
+      background-color: #002244;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar branca com logo centralizada e botão de início à direita -->
+  <nav class="navbar navbar-light bg-white shadow-sm mb-4">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a class="navbar-brand mx-auto" href="#">
+        <img src="logo.png" alt="Logo" class="logo">
+      </a>
+      <a href="index.html" class="btn btn-custom">Início</a>
+    </div>
+  </nav>
+
+  <!-- Notícia -->
+  <div class="noticia-container container">
+    <h1 class="mb-4 text-center">VISITA DA DEPUTADA ESTADUAL MARCIA LIA</h1>
+
+    <div class="row g-4 align-items-start">
+      <!-- Texto da notícia -->
+      <div class="col-md-8">
+        <p>
+          Com imensa satisfação, recebemos a visita da Deputada Estadual Marcia Lia, no dia 30/01/24. A recepção ocorreu na sala de reuniões da Entidade e contou com a presença da Prefeita Municipal Tais Contieri, do Assessor Parlamentar Aristides e sua esposa Neuza, do Provedor Henrique Villa Verde e do Mesário Carlos Eduardo S.de Souza.
+        </p>
+        <p>
+          Na oportunidade o Provedor agradeceu a Deputada pela destinação de Emenda no valor de R$ 150.000,00 (cento e cinquenta mil reais), para a aquisição de 01(uma) máquina de lavar roupas industrial com barreira, capacidade de 50 quilos, 01(uma) máquina de lavar roupas industrial com barreira, capacidade de 30 quilos, 01(uma) calandra horizontal de 01 rolo e 1,60 mts.de largura e 01(uma) maca hidráulica com leito, grade e parte superior de inox e aproveitou para entregar a Deputada novos pedidos de verbas para custeio e aquisição de equipamentos.
+        </p>
+        <p>
+          Após, a comitiva percorreu as dependências da Entidade.
+        </p>
+      </div>
+
+      <!-- Imagem da notícia -->
+      <div class="col-md-4">
+        <div class="card shadow">
+          <img src="noticia1.jpg" alt="Imagem da Notícia" class="card-img-top img-card" onclick="ampliarImagem(this)">
+          <div class="card-body text-center">
+            <small class="text-muted">Clique na imagem para ampliar</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Botões Voltar e Próxima -->
+    <div class="d-flex justify-content-center gap-3 mt-5">
+      <a href="news6.html" class="btn btn-custom">← Voltar</a>
+      <a href="news2.html" class="btn btn-custom">Próxima →</a>
+    </div>
+  </div>
+
+  <!-- Imagem em tela cheia -->
+  <div id="imgExpandida" onclick="fecharImagem()">
+    <img src="" id="imgFull">
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    function ampliarImagem(img) {
+      const imgExpandida = document.getElementById('imgExpandida');
+      const imgFull = document.getElementById('imgFull');
+      imgFull.src = img.src;
+      imgExpandida.classList.add('mostrar');
+    }
+
+    function fecharImagem() {
+      document.getElementById('imgExpandida').classList.remove('mostrar');
+    }
+
+    // Fechar com ESC
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        fecharImagem();
+      }
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Rodapé -->
+  <footer class="bg-dark text-white text-center py-4 mt-5">
+    <div class="container">
+      <p class="mb-2">&copy; 2025 Santa Casa de Cafelândia. Todos os direitos reservados.</p>
+      <div class="d-flex justify-content-center gap-3">
+        <a href="https://facebook.com" target="_blank" class="text-white fs-4"><i class="bi bi-facebook"></i></a>
+        <a href="https://instagram.com" target="_blank" class="text-white fs-4"><i class="bi bi-instagram"></i></a>
+        <a href="https://linkedin.com" target="_blank" class="text-white fs-4"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

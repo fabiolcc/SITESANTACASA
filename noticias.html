@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icone.ico" type="image/x-icon">
+    <title>Notícias - Santa Casa de Cafelândia</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgba(135, 204, 235, 0.7);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: url('capa.jpg') no-repeat center/cover;
+            color: #ffff;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        main {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .btn-voltar {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background: #0c2386;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .btn-voltar:hover {
+            background: #0e8536;
+        }
+        .news-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .news-box {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .news-box img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        .news-box h2 {
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+        .news-box p {
+            font-size: 1em;
+            margin: 10px 0;
+        }
+        .btn-read-more {
+            display: inline-block;
+            background: #0c2386;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: auto;
+        }
+        .btn-read-more:hover {
+            background: #0f4628;
+        }
+        footer {
+            background-color: #155724;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        @media (max-width: 900px) {
+            .news-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 600px) {
+            .news-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Notícias</h1>
+    </header>
+    <main>
+        <a href="index.html" class="btn-voltar">Voltar</a>
+        <section class="news-container">
+            <div class="news-box">
+                <img src="noticia1.jpg" alt="Notícia 1">
+                <h2>VISITA DA DEPUTADA ESTADUAL MARCIA LIA</h2>
+                <p>Com imensa satisfação, recebemos a visita...</p>
+                <a href="news1.html" class="btn-read-more">Leia mais</a>
+            </div>
+            <div class="news-box">
+                <img src="noticia2.jpg" alt="Notícia 2">
+                <h2>REFORMA INTERNA DA SANTA CASA – 3ª ETAPA</h2>
+                <p>A 3ª etapa realizada na ala de internação SUS...</p>
+                <a href="news2.html" class="btn-read-more">Leia mais</a>
+            </div>
+            <div class="news-box">
+                <img src="noticia3.jpg" alt="Notícia 3">
+                <h2>AGRADECIMENTO</h2>
+                <p>A Diretoria da Irmandade da Santa Casa de Misericórdia de Cafelândia...</p>
+                <a href="news3.html" class="btn-read-more">Leia mais</a>
+            </div>
+            <div class="news-box">
+                <img src="noticia4.jpg" alt="Notícia 4">
+                <h2>AQUISIÇÃO DE EQUIPAMENTOS</h2>
+                <p>Com satisfação, informo a recente aquisição...</p>
+                <a href="news4.html" class="btn-read-more">Leia mais</a>
+            </div>
+            <div class="news-box">
+                <img src="noticia5.jpg" alt="Notícia 5">
+                <h2>TREINAMENTO EM URGÊNCIAS E EMERGÊNCIAS TRAUMÁTICAS</h2>
+                <p>Nos últimos dias 26 e 27 de Outubro, aconteceu na Santa Casa...</p>
+                <a href="news5.html" class="btn-read-more">Leia mais</a>
+            </div>
+            <div class="news-box">
+                <img src="noticia6.jpg" alt="Notícia 6">
+                <h2>TREINAMENTO COM A EQUIPE DE ENFERMAGEM</h2>
+                <p>Nesta Quarta Feira 28/03, foi realizado junto à equipe de enfermagem...</p>
+                <a href="news6.html" class="btn-read-more">Leia mais</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Santa Casa de Cafelândia - Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
